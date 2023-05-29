@@ -9,21 +9,35 @@
 
     .search-bar {
         position: relative;
-        width: 300px;
+        width: calc(100% - 32px);
+        margin-left: 16px;
 
         input {
             width: 100%;
             padding: 10px;
+            border: 5px solid $color-primary;
+            border-radius: 20px;
+            font-family: $font-roboto-regular;
+            color: $color-secondary;
+            background-color: $color-bg-1;
             box-sizing: border-box;
+            font-size: 20px;
+        }
+
+        input::placeholder {
+            color: #9B9B9B;
         }
 
         .search-button {
             position: absolute;
-            right: 0;
-            top: 0;
-            height: 100%;
-            border: none;
-            background: none;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            height: 30px;
+            width: 70px;
+            border-radius: 20px;
+            color: $color-bg-1;
+            background-color: $color-primary;
         }
     }
 
@@ -46,7 +60,7 @@
         padding: 20px 0px;
 
         h3 {
-            color: 171717;
+            color: #252525;
         }
     }
 
@@ -59,6 +73,16 @@
 
     .tag_container {
         display: flex;
+        margin-top: 10px;
+
+        p {
+            padding: 2px 15px;
+            background-color: $color-primary;
+            color: $color-bg-1;
+            margin: 0px 5px;
+            border-radius: 20px;
+            font-family: $font-roboto-regular;
+        }
     }
 
 }

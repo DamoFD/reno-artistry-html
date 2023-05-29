@@ -198,15 +198,6 @@ textarea, textarea:focus {
   color: gray;
 }
 
-.active {
-  color: #9A1750 !important;
-  background-color: #262627;
-  border-radius: 10px;
-  padding: 5px 10px;
-  border-bottom: 1px solid #9A1750;
-  border-left: 1px solid #9A1750;
-}
-
 /* MOBILE MENU & ANIMATION */
 .menu-toggle .bar {
   width: 25px;
@@ -262,7 +253,7 @@ textarea, textarea:focus {
     position: fixed;
     justify-content: start;
     top: 0;
-    background-color: rgb(21, 21, 21);
+    background-color: #E3E2DF;
     width: 80%;
     height: 100vh;
     transform: translate(-100%);
@@ -278,9 +269,9 @@ textarea, textarea:focus {
     margin-top: 50px;
   }
   .navbar li a {
-    font-size: 40px;
-    color: white;
-    font-family: "roboto-regular", sans-serif;
+    font-size: 30px;
+    color: #9A1750;
+    font-family: "rale-bold", sans-serif;
   }
   .menu-toggle, .bar {
     display: block;
@@ -338,20 +329,33 @@ textarea, textarea:focus {
 }
 #listings .search-bar {
   position: relative;
-  width: 300px;
+  width: calc(100% - 32px);
+  margin-left: 16px;
 }
 #listings .search-bar input {
   width: 100%;
   padding: 10px;
+  border: 5px solid #9A1750;
+  border-radius: 20px;
+  font-family: "roboto-regular", sans-serif;
+  color: #353535;
+  background-color: #E3E2DF;
   box-sizing: border-box;
+  font-size: 20px;
+}
+#listings .search-bar input::placeholder {
+  color: #9B9B9B;
 }
 #listings .search-bar .search-button {
   position: absolute;
-  right: 0;
-  top: 0;
-  height: 100%;
-  border: none;
-  background: none;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 30px;
+  width: 70px;
+  border-radius: 20px;
+  color: #E3E2DF;
+  background-color: #9A1750;
 }
 #listings .grid {
   display: grid;
@@ -371,7 +375,7 @@ textarea, textarea:focus {
   padding: 20px 0px;
 }
 #listings .grid_item h3 {
-  color: 171717;
+  color: #252525;
 }
 #listings .grid_img {
   width: 290px;
@@ -381,6 +385,15 @@ textarea, textarea:focus {
 }
 #listings .tag_container {
   display: flex;
+  margin-top: 10px;
+}
+#listings .tag_container p {
+  padding: 2px 15px;
+  background-color: #9A1750;
+  color: #E3E2DF;
+  margin: 0px 5px;
+  border-radius: 20px;
+  font-family: "roboto-regular", sans-serif;
 }
 
 /*# sourceMappingURL=style.css.map */
