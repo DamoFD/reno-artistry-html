@@ -38,6 +38,7 @@
             border-radius: 20px;
             color: $color-bg-1;
             background-color: $color-primary;
+            font-family: $font-rale-bold;
         }
     }
 
@@ -58,6 +59,10 @@
         align-items: center;
         justify-content: space-around;
         padding: 20px 0px;
+
+        h2 {
+            font-size: 35px;
+        }
 
         h3 {
             color: #252525;
@@ -83,6 +88,53 @@
             border-radius: 20px;
             font-family: $font-roboto-regular;
         }
+    }
+
+    /* Galaxy Fold */
+    @media only screen and (max-width: 350px) {
+        .grid_img {
+            width: 200px;
+            height: 120px;
+        }
+    }
+
+    /* Desktop */
+    @media only screen and (min-width: 900px) {
+        .search-bar {
+            width: calc(100% - 140px);
+            margin-left: 70px;
+
+            input {
+                height: 70px;
+            }
+
+            .search-button {
+                height: 45px;
+                width: 110px;
+                font-size: 23px;
+            }
+        }
+
+        .grid {
+            grid-template-columns: 1fr 1fr;
+            width: calc(100% - 160px);
+            margin-left: 80px;
+            gap: 40px;
+        }
+
+        .grid_item {
+            flex-direction: row;
+        }
+
+        .grid_img {
+            width: 40%;
+            height: 318px;
+        }
+
+        .tag_container {
+            margin-top: 40px;
+        }
+
     }
 
 }

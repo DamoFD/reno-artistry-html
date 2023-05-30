@@ -84,38 +84,29 @@ textarea, textarea:focus {
 
 /* Galaxy Fold */
 @media only screen and (max-width: 350px) {
-  .font-size-header {
-    font-size: 50px;
+  .font-size-xl {
+    font-size: 40px;
+  }
+  .font-size-lg {
+    font-size: 25px;
   }
   .font-size-med {
-    font-size: 16px;
-  }
-  .font-size-small {
-    font-size: 16px;
-  }
-}
-/* Skinny */
-@media only screen and (min-width: 900px) {
-  .font-size-header {
-    font-size: 150px;
-  }
-  .font-size-med {
-    font-size: 30px;
-  }
-  .font-size-small {
     font-size: 20px;
+  }
+  .font-size-sm {
+    font-size: 16px;
   }
 }
 /* Desktop */
 @media only screen and (min-width: 1075px) {
-  .font-size-header {
-    font-size: 220px;
+  .font-size-xl {
+    font-size: 100px;
+  }
+  .font-size-lg {
+    font-size: 75px;
   }
   .font-size-med {
-    font-size: 40px;
-  }
-  .font-size-small {
-    font-size: 30px;
+    font-size: 50px;
   }
 }
 /* colors */
@@ -156,8 +147,8 @@ textarea, textarea:focus {
 }
 
 .header-img {
-  width: 84px;
-  height: 84px;
+  width: 250px;
+  height: 250px;
 }
 
 /* NAVIGATION */
@@ -187,7 +178,7 @@ textarea, textarea:focus {
 .nav-item a {
   color: #353535;
   font-size: 30px;
-  font-weight: 400;
+  font-weight: bold;
   text-decoration: none;
   transition: color 0.3s ease-out;
   margin-right: 20px;
@@ -247,6 +238,10 @@ textarea, textarea:focus {
     padding: 50px;
   }
   /* MOBILE NAVIGATION */
+  .header-img {
+    width: 100px;
+    height: 100px;
+  }
   .navbar ul {
     display: flex;
     flex-direction: column;
@@ -291,6 +286,13 @@ textarea, textarea:focus {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  /* Desktop */
+}
+#hero .hero_content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 #hero .line-height {
   line-height: 65px;
@@ -300,10 +302,19 @@ textarea, textarea:focus {
   padding: 15px 25px;
   border-radius: 20px;
   text-decoration: none;
+  text-align: center;
   background: radial-gradient(86.59% 86.59% at 50% 50%, #A91958 0%, #65193A 100%);
+  transition: transform 0.5s ease;
 }
 #hero .btn:hover {
   cursor: pointer;
+  background: radial-gradient(86.59% 86.59% at 50% 50%, #c91f69 0%, #65193A 100%);
+  transform: translateY(-5px);
+}
+#hero .btn:active {
+  cursor: pointer;
+  background: radial-gradient(86.59% 86.59% at 50% 50%, #A91958 0%, #65193A 100%);
+  transform: translateY(5px);
 }
 #hero .overlay, #hero .hero_img {
   position: absolute;
@@ -320,12 +331,27 @@ textarea, textarea:focus {
   object-fit: cover;
   z-index: -2;
 }
+@media only screen and (min-width: 900px) {
+  #hero .hero_content {
+    flex-direction: row;
+  }
+  #hero .line-height {
+    line-height: 150px;
+  }
+  #hero .btn {
+    padding: 30px 50px;
+    margin-left: 200px;
+    margin-top: 0px;
+  }
+}
 
 /* listings section */
 /* Mobile-First */
 #listings {
   background-color: #E3E2DF;
   padding-top: 50px;
+  /* Galaxy Fold */
+  /* Desktop */
 }
 #listings .search-bar {
   position: relative;
@@ -356,6 +382,7 @@ textarea, textarea:focus {
   border-radius: 20px;
   color: #E3E2DF;
   background-color: #9A1750;
+  font-family: "rale-bold", sans-serif;
 }
 #listings .grid {
   display: grid;
@@ -373,6 +400,9 @@ textarea, textarea:focus {
   align-items: center;
   justify-content: space-around;
   padding: 20px 0px;
+}
+#listings .grid_item h2 {
+  font-size: 35px;
 }
 #listings .grid_item h3 {
   color: #252525;
@@ -394,6 +424,42 @@ textarea, textarea:focus {
   margin: 0px 5px;
   border-radius: 20px;
   font-family: "roboto-regular", sans-serif;
+}
+@media only screen and (max-width: 350px) {
+  #listings .grid_img {
+    width: 200px;
+    height: 120px;
+  }
+}
+@media only screen and (min-width: 900px) {
+  #listings .search-bar {
+    width: calc(100% - 140px);
+    margin-left: 70px;
+  }
+  #listings .search-bar input {
+    height: 70px;
+  }
+  #listings .search-bar .search-button {
+    height: 45px;
+    width: 110px;
+    font-size: 23px;
+  }
+  #listings .grid {
+    grid-template-columns: 1fr 1fr;
+    width: calc(100% - 160px);
+    margin-left: 80px;
+    gap: 40px;
+  }
+  #listings .grid_item {
+    flex-direction: row;
+  }
+  #listings .grid_img {
+    width: 40%;
+    height: 318px;
+  }
+  #listings .tag_container {
+    margin-top: 40px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
